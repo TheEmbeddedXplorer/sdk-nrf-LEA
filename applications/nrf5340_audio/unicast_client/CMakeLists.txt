@@ -4,5 +4,7 @@
 # SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
 #
 
+add_subdirectory(tap)
+
 target_sources(app PRIVATE
 	       ${CMAKE_CURRENT_SOURCE_DIR}/main.c)
