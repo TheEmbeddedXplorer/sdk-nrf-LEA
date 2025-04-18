@@ -35,13 +35,9 @@
  static enum stream_state strm_state = STATE_PAUSED;
  
  // --> CUSTOMER_UPDATE
- #if 0
- static char LS_NAME[] = "LoneStarr-Megha";
- #else
  #define MAX_TARGET_DEV_NAME_LEN	28
  static char GALAXY_BUDS_NAME[] = "Galaxy Buds2 Pro";
  static char TARGET_DEVICE_NAME[MAX_TARGET_DEV_NAME_LEN] = "";
- #endif
  // <-- CUSTOMER_UPDATE
  
  ZBUS_SUBSCRIBER_DEFINE(button_evt_sub, CONFIG_BUTTON_MSG_SUB_QUEUE_SIZE);
@@ -753,8 +749,6 @@
 	 // ToDo: Move below lines to a usb command handler -- only start scanning & connection when said so over USB.
 	 // ret = bt_mgmt_scan_start(0, 0, BT_MGMT_SCAN_TYPE_CONN, CONFIG_BT_DEVICE_NAME,
 	 // 			 BRDCAST_ID_NOT_USED);
- 
-	 // ret = bt_mgmt_scan_start(0, 0, BT_MGMT_SCAN_TYPE_CONN, LS_NAME, BRDCAST_ID_NOT_USED);
  
 	 // --> CUSTOMER_UPDATE
 	 // Register TAP Commands.
